@@ -1,25 +1,22 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/*app.controller('myCtrl', function($scope) {
-    $scope.firstname = "eneye";
-    $scope.changeName = function() {
-        $scope.firstname = "Nelly";
+
+app.controller("myCtrl", function($scope) {
+    var a = [];
+    $scope.products = ["Yusuf", "Abdul", "Yunusa"];
+    $scope.addItem = function () {
+        $scope.addMe = $scope.first+" "+$scope.middle+" "+$scope.last;
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}
+        if ($scope.products.indexOf($scope.addMe) === -1) {
+            $scope.products.push($scope.addMe);
+            $scope.first = "";
+            $scope.middle ="";
+            $scope.last = "";
+        } else {
+            $scope.errortext = "The item is already in your shopping list.";
+        }
     }
-});*/
-app.run(function($rootScope) {
-    $rootScope.color = 'blue';
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";
+        $scope.products.splice(x, 1);
+    }
 });
-app.controller('myCtrl', function($scope) {
-    $scope.data = ["apple","yusuf"];
-});
-//var app = angular.module("myApp", []);
-app.directive("w3TestDirective", function() {
-    return {
-        template : "<h1>Made by a directive!</h1>"
-    };
-});
-
-
