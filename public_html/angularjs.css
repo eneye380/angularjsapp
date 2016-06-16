@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 15, 2016, 6:30:26 PM
+    Author     : eneye380
+*/
+
+input.ng-invalid {
+    background-color: lightblue;
+}
+input.ng-dirty {
+    background-color: pink;
+}
+div#footer{
+    margin-top: 25px;
+    padding: 50px;
+    background: #23527c;
+    color:whitesmoke;
+}
+
+section{
+    padding: 50px;
+}
+div#header{
+    margin-bottom: 15px;
+    padding: 20px;
+    background: #122b40;
+    color: #843534;
+}
+#header h2{
+    background: whitesmoke;
+    display: inline;
+    padding: 10px;
+}
+form button{
+    margin-top: 7px;
+}

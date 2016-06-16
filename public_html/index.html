@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en-US">
+    <head>
+        <title>AngularJS</title>
+        <script src="angular.min.js"></script>
+        <link href="angularjs.css" rel="stylesheet">
+        <link href="bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body data-ng-app="myApp">
+        <div id='header' class="text-primary text-right">
+            <h2>Population Capture System</h2>
+        </div>
+        <div class='container'>
+            <section id='datastore'>
+
+                <div class="row">
+                    <div class='col-lg-4 form-horizontal'>
+                        <p><span>{{first}}</span><span>{{middle}}</span><span>{{last}}</span></p>
+                        <form>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <label>First Name:</label>
+                                    <input type='text' class='form-control' data-ng-model="first" placeholder='Firstname'>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <label> Middle Name:</label>
+                                    <input type='text' class='form-control' data-ng-model="middle" placeholder='Middlename'>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <label>Last Name:</label>
+                                    <input type='text' class='form-control' data-ng-model="last" placeholder='Lastname'>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <label> Age: </label>
+                                    <input type='number' class='form-control' data-ng-model="age" placeholder='Age' min="18">
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <label>Email: </label>
+                                    <input type='email' class='form-control' data-ng-model="email" placeholder='Email'>
+                                </div>
+                            </div>
+                            <div class='row'>
+                                <div class='col-lg-12'>
+                                    <button type='button' class='btn form-control btn-primary'>Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='col-lg-1'>
+                        
+                    </div>
+                    <div class='col-lg-7' data-ng-controller="myCtrl" data-ng-init='data1=["apple","mango","orange"]'>
+                        <ul>
+                            <li data-ng-repeat="x in data">{{x}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id='footer' class='text-center text-capitalize' data-ng-init='author = "abdulmumin eneye abdulkarim"'>
+            <h5 data-ng-bind="author"></h5>
+        </div>
+        <script src="myApp.js" type="text/javascript"></script>
+        <script src="myCtrl.js" type="text/javascript"></script>
+    </body>
+</html>
