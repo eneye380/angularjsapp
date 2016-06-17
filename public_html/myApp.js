@@ -5,4 +5,4 @@
  */
 
 
-var app = angular.module('myApp', []);
+app = angular.module('myApp', []);
